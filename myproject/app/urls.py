@@ -19,8 +19,8 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path('messages/',views.MessageListView.as_view(), name='message_list'),
-    path('messages/create/', views.MessageCreateView.as_view(), name='message_create'),
+    path('messages/',views.message_list_view, name='message_list'),
+    path('messages/create/', views.message_create_view, name='message_create'),
       path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
 ]
